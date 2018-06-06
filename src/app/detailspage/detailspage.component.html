@@ -1,0 +1,106 @@
+
+<div class="container-fluid">
+<div class="row" style="margin-top:30px;" width="100%">
+  <div class="col-md-4" >
+    <code><u>Gitsearch app</u></code>
+    <br />
+      Githubsearch is an application that is used to search a persons details on github. Details include:
+
+      <ul>
+        <li>the username<i class="fa fa-arrow-circle-right"></i></li>
+        <li>Repositories</li>
+        <li>location</li>
+        <li> contacts </li>
+
+      </ul>
+  </div>
+
+  <div class="col-md-4" >
+<form (ngSubmit)='findprofile()' class="search-form">
+      <div class="form-group">
+        <p>please enter github username </p>
+        <input type="text" class="form-control" placeholder="enter Github username" [(ngModel)]="username"
+              name="username" >
+              <br />
+        <button class="btn btn-success" type="submit">search</button>
+      </div>
+  </form>
+</div>
+
+<div class="col-md-4">
+<img src="assets/tran.png" class="img-circle img-responsive">
+          </div>
+
+    </div>
+
+
+<div class="row" style="margin-top:30px;">
+  <div class="col-md-6" id="hide">
+    <div *ngIf="profile">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              {{profile.name}}<small>{{profile.login}}</small>
+              <span *ngIf="profile.company">,works at {{profile.company}}</span>
+              {{profile.location}}
+            </div>
+            <div class="panel-body">
+                  <div class="col-md-4">
+                        <img class="img-circle img-responsive" src="{{profile.avatar_url}}" size="40pxe">
+                  </div>
+                  <div class="col-md-8">
+                    <br />
+                          <ul class="list-group">
+                            <li class="list-group-item"><strong>usersname: </strong>{{profile.login}}</li>
+                            <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
+                            <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
+                            <li class="list-group-item"><strong>Blog: </strong>{{profile.blog}}</li>
+                            <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li>
+
+                            <div class="stats">
+                                <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
+                                <span class="badge badge-primary">{{profile.public_gists}} Public Gists</span> &nbsp;
+                                <span class="badge badge-success">{{profile.followers}} Followers</span> &nbsp;
+                                <span class="badge badge-info">{{profile.following}} Following</span>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+
+
+
+
+
+  <div class="col-md-6">
+<div>
+  <div class="card card2 card-default mt-5">
+    <div class="card card2 card-heading pt-2">
+        <h3 class=" card2 card-title ml-5 ">Repos</h3>
+      </div>
+      <div class="card2 card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div *ngFor="let repo of repos">
+              <div class="row">
+                <div class="col-md-9">
+                  <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                  <p>{{repo.description}}</p>
+                </div>
+                <div class="col-md-3">
+                  <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+                  <span class="badge badge-primary">{{repo.forks}} Forks</span>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
