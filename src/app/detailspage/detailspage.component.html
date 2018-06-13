@@ -49,13 +49,13 @@
                   </div>
                   <div class="col-md-8">
                     <br />
+                    <pre>
                           <ul class="list-group">
                             <li class="list-group-item"><strong>usersname: </strong>{{profile.login}}</li>
                             <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
                             <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
                             <li class="list-group-item"><strong>Blog: </strong>{{profile.blog}}</li>
                             <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li>
-
                             <div class="stats">
                                 <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
                                 <span class="badge badge-primary">{{profile.public_gists}} Public Gists</span> &nbsp;
@@ -63,6 +63,7 @@
                                 <span class="badge badge-info">{{profile.following}} Following</span>
                             </div>
                           </ul>
+                        
                         </div>
                       </div>
                     </div>
