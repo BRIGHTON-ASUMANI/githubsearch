@@ -43,20 +43,20 @@
               <span *ngIf="profile.company">,works at {{profile.company}}</span>
               {{profile.location}}
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="hide">
                   <div class="col-md-4">
                         <img class="img-circle img-responsive" src="{{profile.avatar_url}}" size="40pxe">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8" id="hide">
                     <br />
-                          <ul class="list-group">
+                          <ul class="list-group" id="hide">
                             <li class="list-group-item"><strong>usersname: </strong>{{profile.login}}</li>
                             <li class="list-group-item"><strong>Email: </strong>{{profile.email}}</li>
                             <li class="list-group-item"><strong>Location: </strong>{{profile.location}}</li>
                             <li class="list-group-item"><strong>Blog: </strong>{{profile.blog}}</li>
                             <li class="list-group-item"><strong>Member Since: </strong>{{profile.created_at}}</li>
 
-                            <div class="stats">
+                            <div class="stats" id="hide">
                                 <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> &nbsp;
                                 <span class="badge badge-primary">{{profile.public_gists}} Public Gists</span> &nbsp;
                                 <span class="badge badge-success">{{profile.followers}} Followers</span> &nbsp;
