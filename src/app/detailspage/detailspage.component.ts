@@ -9,7 +9,7 @@ import * as $ from "jquery"
   styleUrls: ['./detailspage.component.css']
 })
 export class DetailspageComponent implements OnInit {
-
+  
   profile:any= []
 repos:any= []
 username:string
